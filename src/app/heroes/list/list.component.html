@@ -1,0 +1,10 @@
+<h2>Heroes list</h2>
+<hr />
+<div *ngIf="heroes.length">
+    <button (click)="removeFirst()">remove first</button>
+    <button (click)="removeLast()">remove last</button>
+</div>
+<p>Last deleted: {{ deleted }}</p>
+<ul>
+    <li *ngFor="let hero of heroes; let i = index">{{ i + 1 }} - {{ hero }}</li>
+</ul>
